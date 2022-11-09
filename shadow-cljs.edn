@@ -1,0 +1,18 @@
+{:dependencies
+ [[fipp "0.6.26"]]
+
+ :source-paths
+ ["src"]
+
+ :dev-http
+ {8000 "resources/public"}
+
+ :builds
+ {:app-browser {:target :browser
+                :output-dir "resources/public/js"
+                :asset-path "/js"
+                :modules {:main {:entries [test-fipp.core]
+                                 :init-fn test-fipp.core/main}}}
+  :app-node {:target :node-script
+        :output-to "target/dist.js"
+        :main test-fipp.core/main}}}
