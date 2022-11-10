@@ -1,0 +1,2 @@
+{:deps {org.clojure/clojurescript {:mvn/version "1.11.60"}
+        fipp {:mvn/version "0.6.26"}}}
